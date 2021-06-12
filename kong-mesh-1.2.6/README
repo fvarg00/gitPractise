@@ -1,0 +1,69 @@
+Welcome to Kong Mesh!
+
+===============================================================================
+
+This folder contains your download of Kong Mesh:
+
+├── NOTICE
+├── README
+├── bin
+│   ├── envoy
+│   ├── kuma-cp
+│   ├── kuma-dp
+│   ├── kuma-prometheus-sd
+│   └── kumactl
+└── conf
+    └── kuma-cp.conf.yml
+
+===============================================================================
+
+Kong Mesh is built on top of CNCF's Kuma and Envoy, and it extends them with
+additional enterprise features.
+
+To get started with Kong Mesh you can take a look at the official documentation:
+
+* Documentation: https://docs.konghq.com/mesh
+
+DEPLOYMENTS:
+
+Kong Mesh supports both standalone and multi-zone deployments. To learn more:
+
+* Standalone: https://kuma.io/docs/latest/deployments/stand-alone
+* Multi-Zone: https://kuma.io/docs/latest/deployments/multi-zone
+
+GETTING STARTED:
+
+To get started and read the quickstart, follow the instructions for your 
+distribution at: https://konghq.com/install/
+
+While we support different installation methods for both Kubernetes, VMs and 
+other containerized environments, you can also follow these simple commands to 
+get up and running quickly:
+
+KUBERNETES (Standalone):
+
+If you are installing Kong Mesh on Kubernetes, run the following command:
+
+$ kumactl install control-plane --license-path=license.json | kubectl apply -f -
+
+UNIVERSAL (Standalone):
+
+If you are installing Kong Mesh on other platforms (including VMs or other
+containerized environments), just run:
+
+$ KMESH_LICENSE_PATH=license.json kuma-cp run
+
+In Universal mode Kong Mesh runs with the in-memory backend by default. 
+To use Postgres instead please read the docs:
+
+* https://kuma.io/docs/latest/documentation/backends/
+
+NEXT STEPS:
+
+You can now explore the Kong Mesh GUI on `http://localhost:5681/gui`!
+
+Finally, you can start using Kong Mesh by apply traffic policies to any service 
+running in your system:
+
+* Kong Mesh features: https://docs.konghq.com/mesh/
+* Kuma policies: https://kuma.io/policies/
